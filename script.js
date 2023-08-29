@@ -1,5 +1,5 @@
 const scroolToForm = (e) => {
-    document.getElementById("edi-qlq8wjl").scrollIntoView({
+    document.getElementById("image_form").scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
