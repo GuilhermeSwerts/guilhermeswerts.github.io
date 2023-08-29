@@ -11,7 +11,6 @@ document.querySelector("form")
     .addEventListener("submit", onSubmit);
 
 function onSubmit(e) {
-    debugger
     e.preventDefault();
     const name = document.querySelector('input[name="name"]');
     const email = document.querySelector('input[name="email"]');

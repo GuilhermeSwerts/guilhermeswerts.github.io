@@ -1450,10 +1450,17 @@
             #edi-k9vs5xl span {
                 color: #000;
             }
+
             #edi-yb84ygc {
-                height: 60px  !important;;
+                height: 60px !important;
+                ;
                 padding-top: 5px;
             }
+        }
+
+        .typewriter {
+            font-family: monospace;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -1470,17 +1477,18 @@
     style="min-width: 400px;" cz-shortcut-listen="true">
     <section data-section="section" id="section-bbxt5x5" data-uid="section-bbxt5x5" class="" data-draggable="true">
         <div data-section="wrap" class="wrap" data-reverse="true">
-            <div data-editable="text" id="edi-zwjakz1" data-uid="edi-zwjakz1" class="" data-draggable="true">
-                <div style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #ffffff; font-size:24px; line-height: 1.2;"
-                    class="text-content" dir="auto">TRANSFORMANDO CÓDIGOS EM SOLUÇÕES INTELIGENTES</div>
+            <div data-editable="text" id="edi-zwjakz1" data-uid="edi-zwjakz1" class="typewriter" data-draggable="true">
+                <h1 style="font-family:Arial, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #ffffff; font-size:24px; line-height: 1.2;"
+                    class="text-content" dir="auto" id="text_typewriter"> &lt; &gt; TRANSFORMANDO CÓDIGOS EM SOLUÇÕES
+                    INTELIGENTES &lt; /
+                    &gt;
+                </h1>
             </div>
-            <div data-editable="text" id="edi-49b8s6a" data-uid="edi-49b8s6a" class="" data-draggable="true">
-                <div style="font-family: Times, serif; font-weight: 700; color: #fede11; font-size:54px; line-height: 1.2;"
-                    class="text-content" dir="auto">GSC TECH &lt;/
-                    <span style="font-size: 54px;">&gt;</span>
-                </div>
+            <div data-editable="text" id="edi-49b8s6a" data-uid="edi-49b8s6a" data-draggable="true">
+                <h1 style="font-family: Times, serif; font-weight: 700; color: #fede11; font-size:54px; line-height: 1.2;"
+                    class="text-content" dir="auto">GSC TECH
+                </h1>
             </div>
-
         </div>
     </section>
     <section data-section="section" id="section-lkhk22d" data-uid="section-lkhk22d" class="" data-draggable="true">
@@ -1659,5 +1667,46 @@
     </section>
 </body>
 <script src="./script.js"></script>
+<script>
+    (function () {
+        function animateText() {
+            const phrases = [
+                "<> GSC TECH | AUTOMAÇÃO DE SISTEMAS </>",
+                "<> TRANSFORMANDO CÓDIGOS EM SOLUÇÕES INTELIGENTES </>",
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const textElement = document.getElementById("text_typewriter");
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+
+                if (isDeleting) {
+                    charIndex--;
+                } else {
+                    charIndex++;
+                }
+
+                textElement.textContent = currentPhrase.slice(0, charIndex);
+
+                if (!isDeleting && charIndex === currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1000); // Espera após a escrita
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 500); // Espera após a deleção
+                } else {
+                    setTimeout(type, isDeleting ? 50 : 100); // Velocidade da escrita/deleção
+                }
+            }
+
+            type();
+        }
+
+        animateText();
+    })();
+</script>
 
 </html>
