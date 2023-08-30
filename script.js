@@ -5,7 +5,22 @@ const scroolToForm = (e) => {
     });
 }
 
-const validForm = (name, email, msg, phone) => { return name !== '' && email !== '' && msg !== '' && phone !== ''; }
+const validForm = (name, email, msg, phone) => {
+    const isEmailValid = validEmail(email)
+    const isPhoneValid = validPhone(phone)
+    if (!isEmailValid) {
+        alert('Email inválido')
+    }
+    if (!isPhoneValid) {
+        alert('Telefone inválido')
+    }
+    return name !== ''
+        && email !== ''
+        && msg !== ''
+        && phone !== ''
+        && isEmailValid
+        && isPhoneValid;
+}
 
 document.querySelector("form")
     .addEventListener("submit", onSubmit);
@@ -16,14 +31,14 @@ function onSubmit(e) {
     const email = document.querySelector('input[name="email"]');
     const msg = document.querySelector('textarea[name="comment"]');
     const phone = document.querySelector('input[name="phone"]');
-    debugger
     if (validForm(name.value, email.value, msg.value, phone.value)) {
-        let send = enviarEmail(email.value, name.value, msg.value, phone.value);
-        alert(send ? 'Email enviado com sucesso!\n Em 24 horas vamos entrar em contato!' : 'Ops...Algo deu erro ao enviar o email.')
+        let isSend = sendEmail(email.value, name.value, msg.value, phone.value);
+        alert(isSend ? 'Email enviado com sucesso!\n Em 24 horas vamos entrar em contato!' : 'Ops...Algo deu erro ao enviar o email.')
     }
 }
 
-async function enviarEmail(to, name, message, phone) {
+async function sendEmail(to, name, message, phone) {
+    
     let param = {
         name: name,
         to: 'gsctech@hotmail.com',
@@ -40,4 +55,14 @@ async function enviarEmail(to, name, message, phone) {
     }).catch(err => {
         return true;
     });
+}
+
+function validPhone(phone) {
+    var regex = /^[0-9]{10,}$/;
+    return regex.test(phone);
+}
+
+function validEmail(email) {
+    var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return regex.test(email);
 }
