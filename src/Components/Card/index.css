@@ -40,13 +40,12 @@
 }
 
 .card:hover .card-body {
+    transition: 1s;
     display: block;
     z-index: 1;
-    transform: rotateY(180deg);
 }
 
 .card:hover {
-    transform: rotateY(180deg);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 

@@ -3,7 +3,7 @@
     justify-content: space-between  ;
     align-items: center;
     padding: 10px;
-    height: 80px;
+    height: 40px;
     width: 100%;
     position: fixed;
     background: #fff;
@@ -13,7 +13,7 @@
 .header_container::before {
     content: "";
     position: absolute;
-    top: 80px;
+    top: 40px;
     left: 50%;
     margin-left: -30px;
     width: 0;
