@@ -42,6 +42,7 @@
 @media screen and (max-width: 768px) {
     .img_welcome h1 {
         font-size: 8vw; /* Ajusta o tamanho do título em telas menores */
+        padding: 0;
     }
 
     .img_welcome p {
