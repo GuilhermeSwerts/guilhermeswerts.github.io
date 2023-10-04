@@ -31,7 +31,7 @@ export default () => {
             to: 'gsctech@hotmail.com',
             replyto: to,
             message: message,
-            to_name:'gsctech@hotmail.com'
+            to_name:to
         };
     
         const serviceId = 'service_jd43wir';
