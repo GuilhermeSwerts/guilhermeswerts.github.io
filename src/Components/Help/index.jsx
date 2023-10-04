@@ -31,15 +31,16 @@ export default () => {
             to: 'gsctech@hotmail.com',
             replyto: to,
             message: message,
+            to_name:'gsctech@hotmail.com'
         };
     
         const serviceId = 'service_jd43wir';
-        const templateID = 'template_87gzsno';
+        const templateID = 'template_n6a7fa3';
     
-        emailjs.sendForm(serviceId, templateID, param,'HqU4SjAlQ17cluL_w').then(res => {
+        emailjs.send(serviceId, templateID, param,'HqU4SjAlQ17cluL_w').then(res => {
             return true;
         }).catch(err => {
-            return true;
+            return false;
         });
     }
 

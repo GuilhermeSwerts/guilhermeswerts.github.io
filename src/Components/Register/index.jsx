@@ -47,11 +47,10 @@ export default () => {
     
         const serviceId = 'service_jd43wir';
         const templateID = 'template_5tgkzir';
-    
-        emailjs.sendForm(serviceId, templateID, param,'HqU4SjAlQ17cluL_w').then(res => {
+        emailjs.send(serviceId, templateID, param,'HqU4SjAlQ17cluL_w').then(res => {
             return true;
         }).catch(err => {
-            return true;
+            return false;
         });
     }
     
