@@ -1,9 +1,674 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="/icon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="description" content="GSC TECH é uma empresa inovadora no mercado de
-      automação que se dedica a criar soluções inteligentes para melhorar a eficiência e a comodidade
-      em sua vida diária. Nossa equipe é composta por especialistas apaixonados por tecnologia e
-      automação, que se esforçam para oferecer produtos e serviços de alta qualidade que atendam às
-      necessidades de nossos clientes."/><meta name="description" content="GSC TECH é uma empresa inovadora no mercado de
-    automação que se dedica a criar soluções inteligentes para melhorar a eficiência e a comodidade
-    em sua vida diária. Nossa equipe é composta por especialistas apaixonados por tecnologia e
-    automação, que se esforçam para oferecer produtos e serviços de alta qualidade que atendam às
-    necessidades de nossos clientes."><title>GSC TECH</title><script defer="defer" src="/static/js/main.19fee9a2.js"></script><link href="/static/css/main.3787aed9.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional de Guilherme Swerts - Desenvolvedor Full Stack especializado em .NET, React.js e AWS." />
+  <meta name="keywords" content="Guilherme Swerts, Full Stack Developer, .NET, React, TypeScript, AWS, Belo Horizonte" />
+  <meta property="og:title" content="Guilherme Swerts | Full Stack Developer" />
+  <meta property="og:description" content="Desenvolvedor Full Stack com experiência em sistemas bancários, plataformas corporativas e aplicações escaláveis." />
+  <title>Guilherme Swerts | Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor personalizado -->
+  <div id="cursor" class="cursor"></div>
+  <div id="cursor-follower" class="cursor-follower"></div>
+
+  <!-- Partículas de fundo -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>GS<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" id="nav-home" class="nav-link active">Início</a></li>
+      <li><a href="#about" id="nav-about" class="nav-link">Sobre</a></li>
+      <li><a href="#experience" id="nav-experience" class="nav-link">Experiência</a></li>
+      <li><a href="#skills" id="nav-skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" id="nav-education" class="nav-link">Formação</a></li>
+      <li><a href="#contact" id="nav-contact" class="nav-link">Contato</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-greeting reveal-up">
+          <span class="greeting-line"></span>
+          <span>Olá, eu sou</span>
+          <span class="greeting-line"></span>
+        </div>
+        <h1 class="hero-name reveal-up delay-1">
+          <span class="name-line">Guilherme</span>
+          <span class="name-line gradient-text">Swerts</span>
+        </h1>
+        <div class="hero-title reveal-up delay-2">
+          <span class="title-prefix">// </span>
+          <span id="typed-title" class="typed-text"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-description reveal-up delay-3">
+          Desenvolvedor Full Stack com experiência em sistemas bancários, 
+          plataformas corporativas e aplicações escaláveis utilizando 
+          <strong>.NET</strong>, <strong>React.js</strong> e <strong>AWS</strong>.
+        </p>
+        <div class="hero-actions reveal-up delay-4">
+          <a href="#contact" id="btn-contact-hero" class="btn-primary">
+            <span>Entre em Contato</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#experience" id="btn-work-hero" class="btn-secondary">Ver Trabalhos</a>
+        </div>
+        <div class="hero-stats reveal-up delay-5">
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Anos de Exp.</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Empresas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="15">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Tecnologias</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image reveal-right delay-2">
+        <div class="image-frame">
+          <div class="image-glow"></div>
+          <div class="image-border-animation"></div>
+          <img src="avatar.png" alt="Guilherme Swerts - Full Stack Developer" class="avatar-img" />
+          <div class="image-badge">
+            <div class="badge-dot"></div>
+            <span>Disponível para projetos</span>
+          </div>
+        </div>
+        <div class="floating-tech-tags">
+          <div class="tech-tag tag-1">.NET</div>
+          <div class="tech-tag tag-2">React</div>
+          <div class="tech-tag tag-3">AWS</div>
+          <div class="tech-tag tag-4">TypeScript</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// sobre mim</span>
+        <h2 class="section-title">Quem sou <span class="gradient-text">eu?</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-lead">
+            Sou um <strong class="highlight">Desenvolvedor Full Stack</strong> apaixonado por tecnologia, 
+            com sólida experiência em construção de soluções corporativas de alta criticidade.
+          </p>
+          <p>
+            Atuo com <strong>.NET (C#)</strong> no back-end e <strong>React.js/TypeScript</strong> no front-end, 
+            criando sistemas robustos e escaláveis para empresas dos setores financeiro, saúde e varejo.
+          </p>
+          <p>
+            Tenho expertise em <strong>arquitetura de microsserviços</strong>, integração de APIs REST, 
+            otimização de performance em bancos SQL e ambientes cloud com <strong>AWS</strong>.
+          </p>
+          <p>
+            Baseado em <strong>Belo Horizonte/MG</strong>, sempre em busca de desafios que me permitam 
+            crescer e entregar valor real através da tecnologia.
+          </p>
+          <div class="about-contact-cards">
+            <a href="mailto:guilherme.swerts@outlook.com" id="btn-email-about" class="contact-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>guilherme.swerts@outlook.com</span>
+            </a>
+            <a href="tel:+5531971465201" id="btn-phone-about" class="contact-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>(31) 9 7146-5201</span>
+            </a>
+          </div>
+        </div>
+        <div class="about-code reveal-right">
+          <div class="code-window">
+            <div class="code-header">
+              <div class="code-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="code-filename">guilherme.json</span>
+            </div>
+            <div class="code-body">
+              <pre><code><span class="c-bracket">{</span>
+  <span class="c-key">"nome"</span>: <span class="c-string">"Guilherme Swerts"</span>,
+  <span class="c-key">"cargo"</span>: <span class="c-string">"Full Stack Developer"</span>,
+  <span class="c-key">"localizacao"</span>: <span class="c-string">"BH/MG, Brasil"</span>,
+  <span class="c-key">"experiencia"</span>: <span class="c-number">5</span><span class="c-string">"+ anos"</span>,
+  <span class="c-key">"stack"</span>: <span class="c-bracket">[</span>
+    <span class="c-string">".NET"</span>, <span class="c-string">"React.js"</span>,
+    <span class="c-string">"TypeScript"</span>, <span class="c-string">"AWS"</span>,
+    <span class="c-string">"SQL Server"</span>, <span class="c-string">"Docker"</span>
+  <span class="c-bracket">]</span>,
+  <span class="c-key">"disponivel"</span>: <span class="c-bool">true</span>,
+  <span class="c-key">"foco"</span>: <span class="c-bracket">[</span>
+    <span class="c-string">"Performance"</span>,
+    <span class="c-string">"Arquitetura"</span>,
+    <span class="c-string">"Boas Práticas"</span>
+  <span class="c-bracket">]</span>
+<span class="c-bracket">}</span></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// histórico profissional</span>
+        <h2 class="section-title">Experiência <span class="gradient-text">Profissional</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+
+        <!-- Yellowipe -->
+        <div class="timeline-item reveal-left" id="exp-yellowipe">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3 class="exp-company">Yellowipe</h3>
+                <span class="exp-role">Desenvolvedor Full Stack</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  06/2025 – Atual
+                </span>
+                <span class="exp-badge current">Atual</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Atuação em projetos para a <strong>Minerva Foods</strong>, desenvolvendo e mantendo sistemas corporativos</li>
+              <li>Desenvolvimento de funcionalidades utilizando <strong>React (TSX)</strong> no Front-End e <strong>.NET (C#)</strong> no Back-End</li>
+              <li>Criação e manutenção de <strong>APIs REST</strong> e integrações entre sistemas</li>
+              <li>Otimização de consultas <strong>SQL</strong> e APIs, melhorando performance e reduzindo tempo de resposta</li>
+              <li>Participação ativa em <strong>code reviews</strong>, melhorias de arquitetura e boas práticas</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">React TSX</span>
+              <span class="exp-tag">.NET C#</span>
+              <span class="exp-tag">REST APIs</span>
+              <span class="exp-tag">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Viveo -->
+        <div class="timeline-item reveal-right" id="exp-viveo">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3 class="exp-company">Viveo</h3>
+                <span class="exp-role">Desenvolvedor Full Stack</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  10/2022 – 05/2025
+                </span>
+                <span class="exp-duration">2 anos e 7 meses</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Desenvolvimento de <strong>Portais de atendimento</strong> ao paciente utilizando .NET, React, Aspx, APIs e ChatBot</li>
+              <li>Integração com interplayers: <strong>sinch, ActiveCampaign</strong> e outros</li>
+              <li>Sistema de <strong>disparo de e-mails</strong> com rastreamento de cliques, integrado com BI e Active Campaign (.Net Core)</li>
+              <li>Desenvolvimento do sistema de <strong>"Funil Digital"</strong> — captação de pacientes via questionário com filtro por patologia</li>
+              <li>Integração com <strong>Amazon Q</strong> usando IA para identificar vulnerabilidades no código</li>
+              <li>Clientes: <strong>Novartis, Pfizer, Sanofi, Fleury, PTC Therapeutics</strong></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">.NET Core</span>
+              <span class="exp-tag">React</span>
+              <span class="exp-tag">Amazon Q</span>
+              <span class="exp-tag">ActiveCampaign</span>
+              <span class="exp-tag">ChatBot</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Qualify -->
+        <div class="timeline-item reveal-left" id="exp-dataqualify">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3 class="exp-company">Data Qualify</h3>
+                <span class="exp-role">Desenvolvedor Full Stack</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  02/2022 – 01/2025
+                </span>
+                <span class="exp-duration">3 anos e 1 mês</span>
+              </div>
+            </div>
+            <div class="exp-levels">
+              <span class="level-badge senior">🚀 .NET Sênior (Jun 2024 – Jan 2025)</span>
+              <span class="level-badge pleno">⚡ .NET Pleno (Fev 2022 – Jun 2024)</span>
+            </div>
+            <ul class="exp-list">
+              <li>Desenvolvimento e manutenção de sistemas para <strong>call center e crédito consignado</strong></li>
+              <li>Criação de funcionalidades focadas em <strong>automação, proatividade operacional</strong> e aumento de eficiência comercial</li>
+              <li>Stack: <strong>.NET Core, Java, React.js, MySQL, Python e AWS Cloud</strong></li>
+              <li>Participação em melhorias de <strong>performance e manutenção</strong> de sistemas críticos</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">.NET Core</span>
+              <span class="exp-tag">Java</span>
+              <span class="exp-tag">React.js</span>
+              <span class="exp-tag">MySQL</span>
+              <span class="exp-tag">Python</span>
+              <span class="exp-tag">AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- DQR Tech -->
+        <div class="timeline-item reveal-right" id="exp-dqr">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3 class="exp-company">DQR Tech</h3>
+                <span class="exp-role">Desenvolvedor Full Stack</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  07/2022 – 10/2022
+                </span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Atuação em sistemas bancários para o <strong>Banco BTG Pactual</strong> com arquitetura moderna baseada em <strong>microsserviços</strong></li>
+              <li>Desenvolvimento e manutenção de sistema de <strong>crédito utilizando AWS Stack</strong></li>
+              <li>Utilização de serviços: <strong>DynamoDB, Lambda, SQS, SNS e CloudWatch</strong></li>
+              <li>Desenvolvimento Front-End com <strong>React.js e Micro Frontends</strong></li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">.NET</span>
+              <span class="exp-tag">React</span>
+              <span class="exp-tag">DynamoDB</span>
+              <span class="exp-tag">Lambda</span>
+              <span class="exp-tag">Microsserviços</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Connecta -->
+        <div class="timeline-item reveal-left" id="exp-connecta">
+          <div class="timeline-marker">
+            <div class="marker-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+          </div>
+          <div class="timeline-content">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3 class="exp-company">Connecta Soluções Integradas S.A</h3>
+                <span class="exp-role">Desenvolvedor Full Stack</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  09/2021 – 07/2022
+                </span>
+                <span class="exp-duration">10 meses</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Desenvolvimento de <strong>aplicações corporativas</strong> para o setor bancário</li>
+              <li>Atuação em ambientes <strong>Local, QA e Produção</strong></li>
+              <li>Desenvolvimento utilizando <strong>React.js, C#, MySQL e SQL Server</strong></li>
+              <li>Utilização de <strong>Azure DevOps, Git</strong> e metodologias ágeis</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">React.js</span>
+              <span class="exp-tag">C#</span>
+              <span class="exp-tag">SQL Server</span>
+              <span class="exp-tag">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// habilidades técnicas</span>
+        <h2 class="section-title">Stack <span class="gradient-text">Tecnológico</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal-up delay-1" id="skill-backend">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Back-End</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>C# / .NET</span><span class="skill-percent">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>ASP.NET Core</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>REST APIs</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Entity Framework Core</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Java</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Python</span><span class="skill-percent">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-2" id="skill-frontend">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Front-End</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>React.js</span><span class="skill-percent">92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>TypeScript (TSX)</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>HTML / CSS</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Micro Frontends</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-3" id="skill-database">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3>Banco de Dados</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>SQL Server</span><span class="skill-percent">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>MySQL</span><span class="skill-percent">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>DynamoDB</span><span class="skill-percent">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category reveal-up delay-4" id="skill-cloud">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h3>Cloud & DevOps</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>AWS (Lambda, SQS, SNS)</span><span class="skill-percent">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Docker</span><span class="skill-percent">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Git / Azure DevOps</span><span class="skill-percent">88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>CloudWatch</span><span class="skill-percent">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="soft-skills reveal-up">
+        <h3 class="soft-title">Competências <span class="gradient-text">Comportamentais</span></h3>
+        <div class="soft-grid">
+          <div class="soft-item" id="soft-1"><span>🧠</span>Resolução de Problemas</div>
+          <div class="soft-item" id="soft-2"><span>📊</span>Pensamento Analítico</div>
+          <div class="soft-item" id="soft-3"><span>🤝</span>Trabalho em Equipe</div>
+          <div class="soft-item" id="soft-4"><span>💬</span>Comunicação Clara</div>
+          <div class="soft-item" id="soft-5"><span>📋</span>Organização</div>
+          <div class="soft-item" id="soft-6"><span>🚀</span>Proatividade</div>
+          <div class="soft-item" id="soft-7"><span>⚡</span>Capacidade de Adaptação</div>
+          <div class="soft-item" id="soft-8"><span>🎯</span>Foco em Performance</div>
+          <div class="soft-item" id="soft-9"><span>⏰</span>Comprometimento com Prazos</div>
+          <div class="soft-item" id="soft-10"><span>🔍</span>Atenção aos Detalhes</div>
+          <div class="soft-item" id="soft-11"><span>💡</span>Autonomia</div>
+          <div class="soft-item" id="soft-12"><span>📚</span>Aprendizado Contínuo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// formação acadêmica</span>
+        <h2 class="section-title">Formação <span class="gradient-text">Acadêmica</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal-left" id="edu-university">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-content">
+            <div class="edu-badge in-progress">Cursando</div>
+            <h3 class="edu-degree">Engenharia de Software</h3>
+            <p class="edu-institution">Universidade Estácio de Sá</p>
+            <div class="edu-details">
+              <span class="edu-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Belo Horizonte, MG
+              </span>
+              <span class="edu-period">05/2023 – 05/2026</span>
+            </div>
+            <div class="edu-progress-bar">
+              <div class="edu-progress-fill" data-width="60"></div>
+              <span class="edu-progress-label">~60% concluído</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-card reveal-right" id="edu-highschool">
+          <div class="edu-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div class="edu-content">
+            <div class="edu-badge completed">Concluído</div>
+            <h3 class="edu-degree">Ensino Médio</h3>
+            <p class="edu-institution">Escola Estadual Maria Andrade Resende</p>
+            <div class="edu-details">
+              <span class="edu-location">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Belo Horizonte, MG
+              </span>
+              <span class="edu-period">01/2017 – 12/2019</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">// vamos conversar</span>
+        <h2 class="section-title">Entre em <span class="gradient-text">Contato</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="">
+        <div class="contact-info">
+          <p class="contact-lead">
+            Estou sempre aberto a novas oportunidades e desafios. 
+            Se quiser conversar sobre um projeto ou posição, é só entrar em contato!
+          </p>
+          <div class="contact-links">
+            <a href="mailto:guilherme.swerts@outlook.com" id="contact-email" class="contact-link-item">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="link-label">E-mail</span>
+                <span class="link-value">guilherme.swerts@outlook.com</span>
+              </div>
+              <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="tel:+5531971465201" id="contact-phone" class="contact-link-item">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="link-label">Telefone</span>
+                <span class="link-value">(31) 9 7146-5201</span>
+              </div>
+              <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/guilherme-swerts" target="_blank" id="contact-linkedin" class="contact-link-item">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="link-label">LinkedIn</span>
+                <span class="link-value">Perfil do LinkedIn</span>
+              </div>
+              <svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <div class="contact-link-item location-item">
+              <div class="contact-link-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-link-text">
+                <span class="link-label">Localização</span>
+                <span class="link-value">Belo Horizonte, MG – Brasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>GS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-text">
+        Feito com <span class="heart">❤️</span> por <strong>Guilherme Swerts</strong> · Belo Horizonte, MG
+      </p>
+      <p class="footer-copy">© 2025 Guilherme Swerts de Oliveira Lacerda Cavalcante. Todos os direitos reservados.</p>
+    </div>
+    <div class="footer-bg-text">FULL STACK</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
